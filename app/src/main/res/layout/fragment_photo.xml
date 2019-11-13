@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/colorPrimary"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llPreviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <SurfaceView
+                android:id="@+id/svTransparentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                />
+
+            <View
+                android:id="@+id/vBorderCamera"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/ic_camera_frame" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlButtonHolder"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/button_holder_background">
+
+                <LinearLayout
+                    android:id="@+id/llPromptText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="25dp"
+                    android:gravity="center_horizontal|top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instruction_prompt_nid"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPromptText">
+
+
+                    <ImageView
+                        android:id="@+id/ivPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_photo_blue"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <Button
+                            android:id="@+id/btnCapture"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:paddingBottom="25dp"
+                            android:background="@drawable/ic_capture_button"
+                            android:layout_centerInParent="true"
+                            />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/ic_camera_button_border"
+                            android:layout_centerInParent="true"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_camera_blue"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="VectorDrawableCompat" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
