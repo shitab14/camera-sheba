@@ -10,4 +10,6 @@
 
     <color name="button_gradient_start">#009fe7</color>
     <color name="button_gradient_end">#0066cb</color>
+
+    <color name="button_hollowed_blue">#0084da</color>
 </resources>

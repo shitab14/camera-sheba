@@ -3,6 +3,8 @@ package xyz.sheba.camera_sheba;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -56,22 +58,34 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnF
 //        ButterKnife.bind(this);
         checkPermissions();
 
-        findViewById(R.id.make_photo_button).setOnClickListener(new View.OnClickListener() {
+        // check permissions
+        if (!flagPermissions) {
+            checkPermissions();
+            return;
+        }
+        else {
+            /*this.finish();
+            System.exit(0);*/
+        }
+
+        //start photo fragment
+        startPhotoFragment();
+
+
+        /*findViewById(R.id.make_photo_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // check permissions
-                if (!flagPermissions) {
-                    checkPermissions();
-                    return;
-                }
-                //start photo fragment
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.res_photo_layout, new PhotoFragment())
-                        .addToBackStack(null)
-                        .commit();
+
             }
-        });
+        });*/
+    }
+
+    private void startPhotoFragment() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.res_photo_layout, new PhotoFragment())
+                .addToBackStack(null)
+                .commit();
     }
 
 
@@ -126,5 +140,11 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnF
                     .commit();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 
 }

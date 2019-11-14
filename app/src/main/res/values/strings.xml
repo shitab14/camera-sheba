@@ -4,4 +4,10 @@
     <string name="instruction_prompt_nid">আপনার NID ফ্রেমের ভেতরে রেখে স্পষ্ট ছবি তুলুন </string>
 
     <string name="confirm_image_prompt">ছবিটি স্পষ্ট উঠেছে কিনা নিশ্চিত করুন </string>
+    <string name="nid_front_side">NID এর সামনের দিক</string>
+    <string name="nid_back_side">NID এর পিছনের দিক</string>
+
+    <string name="take_photo_again">আবার ছবি তুলুন </string>
+    <string name="submit">সাবমিট করুন </string>
+
 </resources>

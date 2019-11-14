@@ -47,13 +47,10 @@ public class PhotoFragment extends Fragment implements SurfaceHolder.Callback  {
     boolean previewing = false;
     Context context;
 
-    //@BindView(R.id.llPreviewLayout)
     LinearLayout llPreviewLayout;
 
-    //@BindView(R.id.vBorderCamera)
     View vBorderCamera;
-    /*@BindView(R.id.res_border_size)
-    TextView resBorderSizeTV;*/
+
 
     Button btnCapture;
 
@@ -339,7 +336,7 @@ public class PhotoFragment extends Fragment implements SurfaceHolder.Callback  {
 
             os.flush();
             os.close();
-            Log.i("ExternalStorage", "Writed " + path + file.getName());
+            Log.i("ExternalStorage", "Written " + path + file.getName());
             // Tell the media scanner about the new file so that it is
             // immediately available to the user.
             MediaScannerConnection.scanFile(context,
