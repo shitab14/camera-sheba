@@ -58,18 +58,18 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnF
 //        ButterKnife.bind(this);
         checkPermissions();
 
+
         // check permissions
         if (!flagPermissions) {
             checkPermissions();
             return;
         }
         else {
-            /*this.finish();
-            System.exit(0);*/
+            //start photo fragment
+            startPhotoFragment();
         }
 
-        //start photo fragment
-        startPhotoFragment();
+
 
 
         /*findViewById(R.id.make_photo_button).setOnClickListener(new View.OnClickListener() {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnF
                 .commit();
     }*/
 
-//    @RequiresApi(api = Build.VERSION_CODES.M)
+    //@RequiresApi(api = Build.VERSION_CODES.M)
     void checkPermissions() {
         if (!hasPermissions(this, PERMISSIONS)) {
             requestPermissions(PERMISSIONS,
